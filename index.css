@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-line;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink text-paper font-sans antialiased;
+  }
+  ::selection {
+    background: #ff3a00;
+    color: #f4f0ea;
+  }
+  :focus-visible {
+    outline: 2px solid #ff3a00;
+    outline-offset: 2px;
+  }
+  input,
+  select,
+  textarea {
+    @apply bg-ink-3 text-paper placeholder:text-steel/70;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Signature diagonal Z-blade motif, echoing the wordmark's cut-through bar */
+.z-blade {
+  background: linear-gradient(135deg, transparent 42%, rgba(255,58,0,0.9) 42%, rgba(255,58,0,0.9) 58%, transparent 58%);
+}
+
+/* Dual-thumb price slider (Shop page) */
+.range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  pointer-events: none;
+  margin: 0;
+}
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f4f0ea;
+  border: 3px solid #ff3a00;
+  cursor: pointer;
+  margin-top: -6px;
+}
+.range-slider::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f4f0ea;
+  border: 3px solid #ff3a00;
+  cursor: pointer;
+}
+.range-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  background: transparent;
+}
+.range-slider::-moz-range-track {
+  height: 4px;
+  background: transparent;
+}
