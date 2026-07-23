@@ -7,7 +7,12 @@ Premium technical streetwear storefront — React + Vite + Tailwind CSS.
 Requires [Node.js](https://nodejs.org) 18 or later.
 
 ```bash
-npm install
+npm installgit init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/z-verse.git
+   git push -u origin main
 npm run dev
 ```
 
