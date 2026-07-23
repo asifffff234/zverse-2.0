@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import { CartProvider } from './context/CartContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -32,6 +33,7 @@ export default function App() {
         <Footer />
       </div>
       <Toast />
+      <Analytics />
     </CartProvider>
   )
 }
